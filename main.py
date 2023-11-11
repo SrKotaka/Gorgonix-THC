@@ -1,6 +1,7 @@
 def print_hi(program):
     print(f'{program}')
 
+
 if __name__ == '__main__':
     print_hi('''
     ------------------------------------------------------------------------------------------------------
@@ -18,6 +19,9 @@ if __name__ == '__main__':
     1. Wifi (Coming soon...)
     2. Instagram
     3. Gmail (Coming soon...)
+    
+    Note: name your attack txt password.txt and move it into the Gorgonix-THC folder to use the program
+    
     ''')
     options = input('Write your option: ')
     match options:
@@ -28,19 +32,19 @@ if __name__ == '__main__':
             print('You chose instagram option')
             instagramUser = input('Username: @')
             try:
-                with open("rockyou.txt", "r", encoding="utf-8", errors="ignore") as file:
+                with open("password.txt", "r", encoding="utf-8", errors="ignore") as file:
                     user_found = False
                     for line in file:
                         if instagramUser in line:
-                            print('Your username is: ' +  line.strip())
+                            print('Your username is: ' + line.strip())
                             user_found = True
                             break
                     if not user_found:
-                        print(f"Username '@{instagramUser}' not found in rockyou.txt.")
+                        print(f"Username '@{instagramUser}' not found in password.txt.")
             except FileNotFoundError:
-                print("O arquivo rockyou.txt não foi encontrado.")
+                print("password.txt is not found.")
             except Exception as e:
-                print(f"Ocorreu um erro: {e}")
+                print(f"Error: {e}")
 
         case "3":
             print('You chose gmail option (Coming soon...)')
