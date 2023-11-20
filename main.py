@@ -36,13 +36,13 @@ if __name__ == '__main__':
                     user_found = False
                     for line in file:
                         if instagramUser in line:
-                            print('Your username is: ' + line.strip())
+                            print('Your password is: ' + line.strip())
                             user_found = True
                             break
                     if not user_found:
-                        print(f"Username '@{instagramUser}' not found in password.txt.")
+                        print(f"The user's password was not found in your password.txt")
             except FileNotFoundError:
-                print("password.txt is not found.")
+                print("password.txt is not found in the folder.")
             except Exception as e:
                 print(f"Error: {e}")
 
