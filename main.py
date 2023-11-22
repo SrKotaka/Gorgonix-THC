@@ -1,7 +1,6 @@
 def print_hi(program):
     print(f'{program}')
 
-
 if __name__ == '__main__':
     print_hi('''
     ------------------------------------------------------------------------------------------------------
@@ -28,6 +27,7 @@ if __name__ == '__main__':
         case "1":
             print('You chose wifi option (Coming soon...)')
 
+        #use selenium
         case "2":
             print('You chose instagram option')
             instagramUser = input('Username: @')
